@@ -50,4 +50,4 @@ rootProject.children.each {
   setBuildFile(it)
 }
 
-gradle.ext.includedProviderProjects = includeProviders.split(',').collect{ ':gate-' + it.toLowerCase() }
+gradle.ext.includedProviderProjects = [] //includeProviders.split(',').collect{ ':gate-' + it.toLowerCase() }
