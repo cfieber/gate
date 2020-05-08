@@ -25,7 +25,8 @@ dependencies {
   implementation "com.netflix.spinnaker.fiat:fiat-api:$fiatVersion"
 
   implementation "com.netflix.spinnaker.kork:kork-plugins"
-  implementation "com.netflix.spinnaker.kork:kork-swagger"
+  implementation "io.springfox:springfox-swagger2"
+//  implementation "com.netflix.spinnaker.kork:kork-swagger"
   implementation "com.netflix.spinnaker.kork:kork-web"
 
   implementation "org.springframework:spring-web"

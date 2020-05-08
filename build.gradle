@@ -5,7 +5,7 @@ plugins {
   id "org.jetbrains.dokka" version "0.10.1" apply false
 }
 
-allprojects {
+subprojects {
   apply plugin: 'io.spinnaker.project'
 
   group = "com.netflix.spinnaker.gate"
@@ -34,11 +34,12 @@ allprojects {
       annotationProcessor "org.projectlombok:lombok"
       testAnnotationProcessor "org.projectlombok:lombok"
 
-      implementation "org.codehaus.groovy:groovy-all"
-      implementation "net.logstash.logback:logstash-logback-encoder"
-      implementation "org.jetbrains.kotlin:kotlin-reflect"
-      runtimeOnly "org.springframework.boot:spring-boot-properties-migrator"
-      testRuntime "org.springframework.boot:spring-boot-properties-migrator"
+      if (name != 'gate-api') {
+
+        implementation "org.codehaus.groovy:groovy-all"
+        implementation "net.logstash.logback:logstash-logback-encoder"
+        implementation "org.jetbrains.kotlin:kotlin-reflect"
+      }
 
       testImplementation "org.spockframework:spock-core"
       testImplementation "org.spockframework:spock-spring"
