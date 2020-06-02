@@ -85,7 +85,7 @@ import static retrofit.Endpoints.newFixedEndpoint
 @Configuration
 @Slf4j
 @EnableConfigurationProperties([FiatClientConfigurationProperties, DynamicRoutingConfigProperties])
-@Import([PluginsAutoConfiguration, DeckPluginConfiguration, PluginWebConfiguration])
+//@Import([PluginsAutoConfiguration, DeckPluginConfiguration, PluginWebConfiguration])
 class GateConfig extends RedisHttpSessionConfiguration {
 
   @Value('${server.session.timeout-in-seconds:3600}')

@@ -62,7 +62,7 @@ class ApplicationController {
 
   @ApiOperation(value = "Retrieve a list of applications", response = List.class)
   @RequestMapping(method = RequestMethod.GET)
-  @PreAuthorize("@fiatPermissionEvaluator.storeWholePermission()")
+  //@PreAuthorize("@fiatPermissionEvaluator.storeWholePermission()")
   @PostFilter("hasPermission(filterObject.get('name'), 'APPLICATION', 'READ')")
   List<HashMap<String, Object>> getAllApplications(
     @ApiParam(name = "account", required = false, value = "filters results to only include applications deployed in the specified account")
